@@ -1,0 +1,14 @@
+HaBalance - suojatun testisivun julkaisu Renderissa
+
+1. Luo yksityinen GitHub-repositorio ja lataa taman paketin sisalto sinne niin, etta render.yaml on repositorion juuressa ja habalance_demo/ sen alla.
+2. Avaa https://dashboard.render.com/ ja valitse New > Blueprint. Yhdista GitHub ja valitse luomasi repositorio.
+3. Render lukee render.yaml-asetukset. Aseta salaiset muuttujat:
+   DEMO_PASSWORD: vahintaan 12 merkkia, itse valitsemasi salasana
+   OPENAI_API_KEY: OpenAI API -avain (valinnainen, mutta vaaditaan oikeaan AI-keskusteluun)
+4. Hyvaksy palvelun luonti. Odota, etta palvelu ilmoittaa tilaksi Live.
+5. Avaa Renderin antama https://...onrender.com -osoite ja kirjaudu kayttajalla habalance ja asettamallasi salasanalla.
+6. Kokeile harjoituksia ja keskustelua iPhonella.
+
+HUOM: Sivustoa ei ole julkaistu automaattisesti. OpenAI API -avain ei kuulu pakettiin.
+Salasanaa tai API-avainta ei saa tallentaa GitHubiin tai lahettaa chattiin.
+Tama on rajatun koekayton prototyyppi. Ennen laajempaa kayttoa tarkista tietosuoja, kustannusrajat ja kayttajien hallinta.

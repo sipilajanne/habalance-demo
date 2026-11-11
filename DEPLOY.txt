@@ -1,0 +1,29 @@
+HaBalance password-protected web demo
+
+This package is DEPLOYMENT-READY, NOT YET PUBLISHED.
+
+Requirements: Python 3.10+, HTTPS hosting / reverse proxy, an OpenAI API key for live AI.
+
+Environment variables (configure as hosting provider secrets, never in source code):
+DEMO_USER=habalance
+DEMO_PASSWORD=<choose a unique password at least 12 characters long>
+OPENAI_API_KEY=<your API key>
+PORT=8000
+Optional: OPENAI_MODEL=gpt-4.1-mini
+
+Start command: python protected_server.py
+Serve publicly ONLY through HTTPS. The browser will prompt for username and password.
+
+Test locally (after setting environment variables):
+python protected_server.py
+Visit http://localhost:8000 and enter the configured credentials.
+
+Notes:
+- The demo uses HTTP Basic Authentication; HTTPS is REQUIRED on the internet.
+- The server serves only the HTML and chat endpoint, never private configuration files.
+- The chat endpoint requires login and is rate limited per IP (12 requests/minute).
+- Keep API keys and demo password as host-managed secrets.
+- This is a limited-access prototype, not a production security audit.
+- Set a usage budget and consider additional abuse controls before sharing widely.
+- AI chat content is sent to the API provider; prepare appropriate privacy information.
+- The page can show sample replies when AI service is unavailable; do not mistake those for live AI.

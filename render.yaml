@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: habalance-suojattu-demo
+    runtime: python
+    plan: free
+    rootDir: habalance_demo
+    buildCommand: python -m compileall -q .
+    startCommand: python protected_server.py
+    envVars:
+      - key: DEMO_USER
+        value: habalance
+      - key: DEMO_PASSWORD
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
